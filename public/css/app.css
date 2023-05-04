@@ -40,7 +40,7 @@ body {
 
 .navbar .wrapper .left {
     width: 100%;
-    flex: 2;
+    flex: 1;
     vertical-align: middle;
 }
 
@@ -80,6 +80,7 @@ body {
 .navbar .wrapper .right ul li a {
     text-decoration: none;
     color: var(--white);
+    text-transform: uppercase;
 }
 .navbar .wrapper .right ul li a:hover {
     color: #f91212;
