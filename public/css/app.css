@@ -1,0 +1,173 @@
+*{
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    transition: all 500ms ease;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+:root {
+    --black: #000;
+    --black-s: #000000bb;
+    --white: #fff;
+    --smoke: #c0c0c0;
+    --grey: #cccccc;
+    --pb-blue: #0082b5;
+    --pb-green: #00cf2d;
+    --pb-red: #f91212;
+    --pb-orange: #ff8400;
+    --bg-dark-blue: #000721d0;
+}
+
+.navbar {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    
+    background: var(--black);
+}
+
+.navbar .wrapper {
+    position: relative;
+    width: 100%;
+    display: flex;
+    padding: 10px;
+}
+
+.navbar .wrapper .left {
+    width: 100%;
+    flex: 2;
+    vertical-align: middle;
+}
+
+.navbar .wrapper .left a {
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 17px;
+    text-transform: uppercase;
+    color: var(--white);
+    margin-left: 20px;
+}
+
+.navbar .wrapper .left a img {
+    position: absolute;
+    display: inline;
+    width: 200px;
+    height: 120px;
+    margin-top: -25px;
+}
+
+.navbar .wrapper .right {
+    flex: 2;
+    display: flex;
+    margin: 4px;
+}
+
+.navbar .wrapper .right ul {
+    display: inline-flex;
+    width: 100%;
+}
+
+.navbar .wrapper .right ul li {
+    list-style-type: none;
+    margin-left: 20px;
+}
+
+.navbar .wrapper .right ul li a {
+    text-decoration: none;
+    color: var(--white);
+}
+.navbar .wrapper .right ul li a:hover {
+    color: #f91212;
+}
+
+/* container */
+.container {
+    position: relative;
+    background: var(--white);
+    width: 100%;
+    height: 100vh;
+}
+
+.container .wrapper {
+    width: 100%;
+}
+
+.container .wrapper img {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100vh;
+    margin: auto;
+}
+
+.container .wrapper .content {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: var(--bg-dark-blue);
+    z-index: 90px;
+}
+
+.container .wrapper .content h2 {
+    position: relative;
+    display: block;
+    max-width: 40%;
+    padding: 10px;
+    font-weight: bolder;
+    margin-top: 100px;
+    left: 50px;
+    font-size: 25px;
+    color: var(--white);
+    line-height: 40px;
+}
+
+.container .wrapper .content h2 b {
+    color: var(--pb-red);
+}
+
+.container .wrapper .content h2 span.g-o {
+    column-rule: var(--pb-red);
+}
+
+.container .wrapper .content p {
+    position: relative;
+    display: block;
+    max-width: 40%;
+    padding: 10px;
+    left: 50px;
+    color: var(--smoke);
+    font-weight: normal;
+    font-size: 18px;
+}
+
+.container .wrapper .content .btn-group {
+    position: relative;
+    display: block;
+    width: 190px;
+    left: 50px;
+    text-align: center;
+}
+.container .wrapper .content .btn-group a {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    text-decoration: none;
+    padding: 10px;
+    border: 1px solid #f91212;
+    color: var(--white);
+    font-weight: normal;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+}
+
+.container .wrapper .content .btn-group a:hover {
+    background: #f91212;
+}
