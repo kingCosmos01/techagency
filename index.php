@@ -19,7 +19,7 @@
 
 
 
-
+<?php include './public/includes/chatbot.php'; ?>
 
 
 <?php require './public/includes/bottom.php'; ?>

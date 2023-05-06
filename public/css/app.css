@@ -1,12 +1,12 @@
 *{
-    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     transition: all 500ms ease;
 }
 
 body {
     padding: 0;
     margin: 0;
-    overflow: hidden;
+    overflow: auto;
 }
 
 :root {
@@ -23,12 +23,13 @@ body {
 }
 
 .navbar {
-    position: relative;
+    position: fixed;
+    display: block;
     top: 0;
     left: 0;
     width: 100%;
-    
     background: var(--black);
+    z-index: 100;
 }
 
 .navbar .wrapper {
@@ -48,9 +49,7 @@ body {
     text-decoration: none;
     font-weight: normal;
     font-size: 17px;
-    text-transform: uppercase;
-    color: var(--white);
-    margin-left: 20px;
+   
 }
 
 .navbar .wrapper .left a img {
@@ -58,7 +57,7 @@ body {
     display: inline;
     width: 200px;
     height: 120px;
-    margin-top: -25px;
+    top: -25px;
 }
 
 .navbar .wrapper .right {
@@ -86,12 +85,24 @@ body {
     color: #f91212;
 }
 
+.navbar .wrapper .right ul li.donateBtn a {
+    padding: 10px;
+    background: var(--pb-red);
+} 
+.navbar .wrapper .right ul li.donateBtn a:hover {
+    color: var(--white);
+    background: transparent;
+    border: 1px solid var(--pb-red);
+}
+
 /* container */
 .container {
     position: relative;
     background: var(--white);
     width: 100%;
     height: 100vh;
+    top: 75px;
+    z-index: 99;
 }
 
 .container .wrapper {
@@ -114,7 +125,7 @@ body {
     width: 100%;
     height: 100vh;
     background: var(--bg-dark-blue);
-    z-index: 90px;
+    z-index: 90;
 }
 
 .container .wrapper .content h2 {
@@ -172,3 +183,86 @@ body {
 .container .wrapper .content .btn-group a:hover {
     background: #f91212;
 }
+
+/* NavTrigger */
+.navTrigger{
+    position: fixed;
+    display: block;
+    top: 20px;
+    right: 20px;
+    background: #e90404;
+    z-index: 999;
+}
+
+.navTrigger .wrapper {
+    position: inherit;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.navTrigger .wrapper span {
+    width: 90%;
+    height: 2%;
+    background: var(--grey);
+    margin-top: 5px;
+}
+
+
+/* Chat Bot */
+.chatbot {
+    position: fixed;
+    display: block;
+    right: 50px;
+    bottom: 90px;
+    background: var(--pb-red);
+    color: var(--white);
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+    
+}
+.chatbot .wrapper{
+    padding: 15px;
+    text-align: center;
+    justify-content: center;
+}
+.chatbot .wrapper span {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+/* Mobile Responsiveness for Navbar starts here */
+@media only screen and (max-width: 900px)
+{
+    .navbar {
+        position: fixed;
+        display: flex;
+        width: 100%;
+        padding: 30px;
+        background: #00111c;
+    }
+
+    .navbar .wrapper .right{
+        display: none;
+    }
+  
+
+   
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Mobile Responsiveness for Landing Page Starts Here */
