@@ -13,6 +13,13 @@
                 <a href="">HIRE US</a>
             </div>
        </div>
+       <div class="arrow-down">
+            <div class="_wrapper">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+       </div>
     </div>
 </div>
 

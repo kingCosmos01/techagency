@@ -1,19 +1,21 @@
 *{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    transition: all 500ms ease;
+    
 }
 
 body {
     padding: 0;
     margin: 0;
     overflow: auto;
+    overflow-x: hidden;
+    transition: all .5s linear;
 }
 
 :root {
     --black: #000;
     --black-s: #000000bb;
     --white: #fff;
-    --smoke: #c0c0c0;
+    --smoke: #f0f0f0;
     --grey: #cccccc;
     --pb-blue: #0082b5;
     --pb-green: #00cf2d;
@@ -40,6 +42,8 @@ body {
 }
 
 .navbar .wrapper .left {
+    position: relative;
+    display: flex;
     width: 100%;
     flex: 1;
     vertical-align: middle;
@@ -56,7 +60,7 @@ body {
     display: inline;
     width: 200px;
     height: 120px;
-    margin-top: -45px;
+    margin-top: -30px;
 }
 
 .navbar .wrapper .right {
@@ -118,7 +122,9 @@ body {
 
 .container .wrapper .content {
     position: absolute;
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
     top: 0;
     left: 0;
     width: 100%;
@@ -130,14 +136,11 @@ body {
 .container .wrapper .content h2 {
     position: relative;
     display: block;
-    max-width: 40%;
-    padding: 10px;
-    font-weight: bolder;
-    margin-top: 100px;
-    left: 50px;
-    font-size: 25px;
+    max-width: 500px;
+    top: 25%;
+    left: 50px; 
+    font-size: 38px;
     color: var(--white);
-    line-height: 40px;
 }
 
 .container .wrapper .content h2 b {
@@ -154,7 +157,8 @@ body {
     max-width: 40%;
     padding: 10px;
     left: 50px;
-    color: var(--smoke);
+    top: 30%;
+    color: var(--white);
     font-weight: normal;
     font-size: 18px;
 }
@@ -163,7 +167,8 @@ body {
     position: relative;
     display: block;
     width: 190px;
-    left: 50px;
+    left: 60px;
+    top: 35%;
     text-align: center;
 }
 .container .wrapper .content .btn-group a {
@@ -172,6 +177,7 @@ body {
     width: 100%;
     text-decoration: none;
     padding: 10px;
+    font-size: 18px;
     border: 1px solid #f91212;
     color: var(--white);
     font-weight: normal;
@@ -236,22 +242,32 @@ body {
 
 
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-    transition: all .2s linear;
+.service {
+    background: #f0f0f0;
+    width: 100%;
+
+}
+.service .head {
+    position: relative;
+    display: flex;
+    width: 100%;
+    background: var(--smoke);
+    text-align: center;
+    justify-content: center;
+}
+
+.service .head h4 {
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
 .container_ {
-    height: 100vh;
     width: 100vw;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    background: #f0f0f0;
 }
 
 .container_ .head {
@@ -352,6 +368,9 @@ body {
 .container_ .card:nth-child(3)::after {
     background: #2ecc71;
 }
+.container_ .card:nth-child(4)::after {
+    background: #ffb300;
+}
 
 .container_ .card:hover::after {
     clip-path: circle(100%);
@@ -374,10 +393,66 @@ body {
     background: rgba(0, 0, 0, .1);
 }
 
+.arrow-down {
+    position: absolute;
+    display: block;
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    cursor: pointer;
+    z-index: 99;
+    animation: .5s linear direct backwards infinite;
+}
 
+.arrow-down ._wrapper {
+    padding: 20px 0px;
+    justify-content: center;
+    border-radius: 2rem;
+    color: var(--white);
+}
 
+.arrow-down ._wrapper span {
+    position: relative;
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: var(--white);
+    margin: 5px 0;
+    border-radius: .2rem;
+    size: 10px;
+}
 
+.arrow-down ._wrapper span:nth-child(1) {
+    transform: rotate(90deg);
+    top: 10px;
+    width: 30px;
+}
 
+.arrow-down ._wrapper span:nth-child(2) {
+    width: 15px;
+    top: 14px;
+    left: 3px;
+    transform: rotate(45deg);
+}
+
+.arrow-down ._wrapper span:nth-child(3) {
+    width: 15px;
+    transform: rotate(-45deg);
+    left: 12px;
+    top: 6px;
+}
+
+@keyframes direct {
+    0% {
+        transform: translateY(5%);
+    }
+    50%{
+        transform: translateY(-5%);
+    }
+    100% {
+        transform: translateY(5%);
+    }
+}
 
 
 
