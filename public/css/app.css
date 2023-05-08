@@ -1,6 +1,6 @@
 *{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    
+    transition: all .5s linear;
 }
 
 body {
@@ -24,8 +24,26 @@ body {
     --bg-dark-blue: #000721d0;
 }
 
+.banner {
+    position: relative;
+    width: 100%;
+    display: flex;
+    background: var(--grey);
+}
+
+.banner .banner-list {
+    width: 100%;
+    display: inline-flex;
+    justify-content: flex-end;
+}
+
+.banner .banner-list li {
+    list-style-type: none;
+    margin-right: 10px;
+}
+
 .navbar {
-    position: fixed;
+    position: relative;
     display: block;
     top: 0;
     left: 0;
@@ -137,7 +155,7 @@ body {
     position: relative;
     display: block;
     max-width: 500px;
-    top: 25%;
+    top: 10%;
     left: 50px; 
     font-size: 38px;
     color: var(--white);
@@ -157,7 +175,7 @@ body {
     max-width: 40%;
     padding: 10px;
     left: 50px;
-    top: 30%;
+    top: 10%;
     color: var(--white);
     font-weight: normal;
     font-size: 18px;
@@ -168,7 +186,7 @@ body {
     display: block;
     width: 190px;
     left: 60px;
-    top: 35%;
+    top: 12%;
     text-align: center;
 }
 .container .wrapper .content .btn-group a {
@@ -393,6 +411,13 @@ body {
     background: rgba(0, 0, 0, .1);
 }
 
+.arrow-down:hover {
+    clear: both;
+    animation-play-state: paused;
+    border: 1px solid var(--pb-red);
+    border-radius: .9rem;
+}
+
 .arrow-down {
     position: absolute;
     display: block;
@@ -405,7 +430,7 @@ body {
 }
 
 .arrow-down ._wrapper {
-    padding: 20px 0px;
+    padding: 15px 0px;
     justify-content: center;
     border-radius: 2rem;
     color: var(--white);

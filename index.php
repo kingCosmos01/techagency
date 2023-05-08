@@ -1,4 +1,5 @@
 <?php require './public/includes/head.php'; ?>
+<?php include './public/includes/banner.php'; ?>
 
 <?php require './public/includes/navbar.php'; ?>
 
