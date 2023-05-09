@@ -29,5 +29,7 @@
 
 <?php include './public/includes/chatbot.php'; ?>
 
+<?php include './public/includes/cookies.php'; ?>
+
 
 <?php require './public/includes/bottom.php'; ?>

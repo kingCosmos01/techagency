@@ -39,9 +39,12 @@ body {
 
 .banner .banner-list li {
     list-style-type: none;
-    margin-right: 10px;
+    margin-right: 20px;
 }
-
+.banner .banner-list li:not(:nth-child(2))::after {
+    content: '|';
+    margin-left: 10px;
+}
 .navbar {
     position: relative;
     display: block;
@@ -481,6 +484,43 @@ body {
 
 
 
+/* cookies */
+
+.cookies-eu-banner {
+    background: #444;
+    color: #fff;
+    padding: 6px;
+    font-size: 13px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 99;
+}
+
+.cookies-eu-banner button {
+    text-decoration: none;
+    border: 1px solid #000;
+    background: #222;
+    color: #fff;
+    padding: 4px 7px;
+    margin: 2px 0;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.07s, color 0.07s, border-color 0.07s;
+}
+
+.cookies-eu-banner button:hover {
+    background: #fff;
+    color: #222;
+}
+
+.hidden {
+    display: none;
+}
+
+/* End of cookies */
 
 
 
